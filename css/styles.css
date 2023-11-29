@@ -34,7 +34,7 @@ img {
 body {
     font-family: Roboto, sans-serif;
     background: #FFF;
-    color: #434455;
+    /* color: #434455; */
 }
 
 .list {
@@ -814,11 +814,13 @@ body {
     font-weight: 400;
     line-height: 2;
     letter-spacing: 0.04em;
-
+    transition: border-color 250ms linear;
+    margin-left: 80px;
 }
 
-.subscribe-form-input::placeholder {
-    color: var(--text-btn-color);
+
+.subscribe-form-input:focus {
+    border-color: var(--accent-color);
 }
 
 .subscribe-form-submit-btn {
@@ -835,6 +837,7 @@ body {
     letter-spacing: 0.04em;
     background: var(--IRIS, #4D5AE5);
     transition: background-color 250ms linear, color 250ms linear;
+    margin-right: 159px;
 }
 
 .subscribe-form-submit-btn:hover,
@@ -848,12 +851,22 @@ body {
     background-color: rgba(46, 47, 66, 0.4);
     width: 100%;
     height: 100%;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 999999999;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 
+.backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
 
 .modal-window {
     min-width: 408px;
@@ -916,4 +929,119 @@ body {
 .clouse-button-svg {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+}
+
+.text-modal-window {
+    width: 360px;
+    margin-bottom: 16px;
+    color: var(--title-text-color);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+
+}
+
+.color-text {
+    color: var(--accent-color);
+}
+
+.review-form-field-input {
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
+
+}
+
+.review-form-field-input:focus {
+    border-color: var(--accent-color);
+}
+
+.review-form-field-label {
+    color: #8E8F99);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    padding-bottom: 8px;
+    display: block;
+}
+
+.review-form-field-iput {
+    position: relative;
+}
+
+.review-icon-form {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    color: #2E2F42;
+    pointer-events: none;
+    transition: color 250ms linear;
+}
+
+.review-form-field-input:focus+.review-icon-form {
+    color: #4D5AE5;
+}
+
+
+.review-form-field {
+    margin-bottom: 26px;
+}
+
+.review-form-coment {
+    width: 100%;
+    height: 120px;
+    border-radius: 4px;
+    border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
+    background-color: transparent;
+    resize: none;
+    padding: 12px 16px;
+    outline: 0px solid transparent;
+    transition: border-color 250ms linear;
+    color: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+}
+
+.review-form-coment {
+    color: color: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
+}
+
+.review-form-coment:focus {
+    border-color: #4D5AE5;
+}
+
+.review-form-checkbox-own {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    stroke-width: 1px;
+    stroke: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
+
+}
+
+.review-form-checkbox:checked+.review-form-checkbox-label>.review-form-checkbox-own {
+    background-color: #4D5AE5;
+    border-color: #4D5AE5;
+}
+
+.review-form-checkbox:checked:focus+.review-form-checkbox-label>.review-form-checkbox-own {
+    outline: 2px solid rgba(0, 0, 255, 0.5);
+}
+
+.review-form-checkbox:checked+.review-form-checkbox-label>.review-form-checkbox-icon {
+    opacity: 1;
+}
+
+.review-form-checkbox-icon {
+    opacity: 0;
+    fill: var(--text-btn-color);
 }
