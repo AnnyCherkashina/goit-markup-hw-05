@@ -796,6 +796,52 @@ body {
     height: 24px;
 }
 
+.subscribe-form {
+    display: flex;
+    column-gap: 24px;
+}
+
+.subscribe-form-input {
+    width: 264px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid var(--text-btn-color);
+    background-color: transparent;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: var(--text-btn-color);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 2;
+    letter-spacing: 0.04em;
+
+}
+
+.subscribe-form-input::placeholder {
+    color: var(--text-btn-color);
+}
+
+.subscribe-form-submit-btn {
+    min-width: 165px;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 4px;
+    background: var(--IRIS, #4D5AE5);
+    color: var(--WHITE, #FFF);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    background: var(--IRIS, #4D5AE5);
+    transition: background-color 250ms linear, color 250ms linear;
+}
+
+.subscribe-form-submit-btn:hover,
+.subscribe-form-submit-btn:focus {
+    background-color: var(--accent-color);
+}
+
 /* =====/FOOTER==== */
 /* =========modal-batton==== */
 .backdrop {
