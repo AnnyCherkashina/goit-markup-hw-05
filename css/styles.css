@@ -796,10 +796,7 @@ body {
     height: 24px;
 }
 
-.subscribe-form {
-    display: flex;
-    column-gap: 24px;
-}
+
 
 .subscribe-form-input {
     width: 264px;
@@ -812,10 +809,11 @@ body {
     color: var(--text-btn-color);
     font-size: 12px;
     font-weight: 400;
-    line-height: 2;
+    line-height: 1.5;
     letter-spacing: 0.04em;
     transition: border-color 250ms linear;
     margin-left: 80px;
+
 }
 
 
@@ -824,7 +822,11 @@ body {
 }
 
 .subscribe-form-submit-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-width: 165px;
+    height: 40px;
     padding: 8px 24px;
     border: none;
     border-radius: 4px;
@@ -835,14 +837,37 @@ body {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em;
-    background: var(--IRIS, #4D5AE5);
+    background-color: var(--button-text-color);
     transition: background-color 250ms linear, color 250ms linear;
     margin-right: 159px;
+    cursor: pointer;
 }
 
 .subscribe-form-submit-btn:hover,
 .subscribe-form-submit-btn:focus {
     background-color: var(--accent-color);
+}
+
+.subscribe-form-container {}
+
+.subscribe-form-text {
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+
+}
+
+.subscribe-form {
+    display: flex;
+    column-gap: 24px;
+
+}
+
+.svg-subscrite-form {
+    margin-left: 16px;
 }
 
 /* =====/FOOTER==== */
@@ -943,9 +968,7 @@ body {
 
 }
 
-.color-text {
-    color: var(--accent-color);
-}
+
 
 .review-form-field-input {
     width: 100%;
@@ -958,10 +981,6 @@ body {
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.review-form-field-input:focus {
-    border-color: var(--accent-color);
-}
-
 .review-form-field-label {
     font-size: 12px;
     font-weight: 400;
@@ -970,6 +989,7 @@ body {
     padding-bottom: 8px;
     display: block;
     margin-bottom: 4px;
+    color: #8e8f99;
 }
 
 .review-form-field-iput {
@@ -993,7 +1013,7 @@ body {
 
 
 .review-form-field {
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 
 .review-form-coment {
@@ -1013,9 +1033,7 @@ body {
     letter-spacing: 0.04em;
 }
 
-.review-form-coment {
-    color: rgda(46, 47, 66, 0.4);
-}
+
 
 .review-form-coment:focus {
     border-color: var(--button-text-color);
@@ -1050,12 +1068,13 @@ body {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
-    color: var(--button-text-color);
+    color: #8e8f99;
 
 }
 
 .review-form-checkbox:checked:focus+.review-form-checkbox-label>.review-form-checkbox-own {
     outline: 2px solid rgba(0, 0, 255, 0.5);
+    border: none;
 }
 
 .review-form-checkbox:checked+.review-form-checkbox-label>.review-form-checkbox-icon {
@@ -1079,5 +1098,4 @@ body {
     background-color: var(--button-text-color);
     border: none;
     border-radius: 4px;
-    transition: background-color 250ms calc(0.4, 0, 0.2, 1);
 }
