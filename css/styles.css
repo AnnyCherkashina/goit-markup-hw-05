@@ -987,9 +987,10 @@ body {
 }
 
 .review-form-field-input {
-   
+
     border: 1px solid rgba(46, 47, 66, 0.4);
 }
+
 .review-form-field-input:focus {
     border-color: var(--button-text-color);
 }
@@ -1080,6 +1081,7 @@ body {
 .review-form-checkbox:checked+.review-form-checkbox-label>.review-form-checkbox-own {
     background-color: var(--accent-color);
     fill: var(--butoon-background-color);
+    border: none;
 }
 
 .review-form-checkbox-label {
@@ -1096,12 +1098,9 @@ body {
     border: none;
 }
 
-.review-form-checkbox:checked+.review-form-checkbox-label>.review-form-checkbox-icon {
-    opacity: 1;
-}
 
 .review-form-checkbox-icon {
-    opacity: 0;
+
     fill: var(--text-btn-color);
 }
 
