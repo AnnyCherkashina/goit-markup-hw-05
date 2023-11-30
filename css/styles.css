@@ -813,6 +813,7 @@ body {
     letter-spacing: 0.04em;
     transition: border-color 250ms linear;
     margin-left: 80px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 
 }
 
@@ -863,7 +864,7 @@ body {
 
 .subscribe-form {
     display: flex;
-    column-gap: 24px;
+    gap: 24px;
 
 }
 
@@ -993,6 +994,10 @@ body {
     color: #8e8f99;
 }
 
+.review-form-field-label:focus {
+    border-color: var(--button-text-color);
+}
+
 .review-form-field-iput {
     position: relative;
     margin-bottom: 8px;
@@ -1014,7 +1019,7 @@ body {
 
 
 .review-form-field {
-    margin-bottom: 8px;
+    margin-bottom: 16px;
 }
 
 .review-form-coment {
@@ -1027,7 +1032,6 @@ body {
     padding: 8px 16px;
     outline: 0px solid transparent;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    color: rgda(46, 47, 66, 0.4);
     font-size: 12px;
     font-weight: 400;
     line-height: 1.17;
@@ -1099,4 +1103,9 @@ body {
     background-color: var(--button-text-color);
     border: none;
     border-radius: 4px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.color-text {
+    color: var(--button-text-color);
 }
