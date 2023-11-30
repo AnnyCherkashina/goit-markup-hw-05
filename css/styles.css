@@ -988,6 +988,7 @@ body {
 
 .review-form-field-input {
     border-color: var(--button-text-color);
+    border: 1px solid rgba(46, 47, 66, 0.4);
 }
 
 .review-form-field-textarea {
